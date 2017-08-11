@@ -3,6 +3,7 @@
 #export DH_VERBOSE=1
 
 VERSION	:= $(shell dpkg-parsechangelog | sed -nr '/^Version:/s/Version: (.*:)?(.*)-(.*)/\2/p')
+DESTDIR	= $(CURDIR)/debian/tmp
 
 %:
 	dh $@ --with dkms
@@ -17,12 +18,16 @@ override_dh_auto_build:
 
 override_dh_auto_clean:
 	make -C library clean
+	rm -f library/libevdi.so*
 
 override_dh_auto_install:
-	# evdi-dkms
-	dh_install module/*.h module/*.c module/Makefile usr/src/evdi-$(VERSION)/
 	# evdi
-	dh_install library/libevdi.so* usr/lib/$(DEB_HOST_MULTIARCH)
+	install -D -m 644 -t "$(DESTDIR)/usr/lib/$(DEB_HOST_MULTIARCH)" library/libevdi.so.0
+	ln -s libevdi.so.0 "$(DESTDIR)/usr/lib/$(DEB_HOST_MULTIARCH)/libevdi.so"
+	# evdi-dev
+	install -D -m 644 -t "$(DESTDIR)/usr/include/" library/*.h
+	# evdi-dkms
+	install -D -m 644  -t "$(DESTDIR)/usr/src/evdi-$(VERSION)" module/*.h module/*.c module/Makefile
 
 # do nothing
 override_dh_auto_configure:
