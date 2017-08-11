@@ -1,0 +1,35 @@
+#!/usr/bin/make -f
+
+#export DH_VERBOSE=1
+
+VERSION	:= $(shell dpkg-parsechangelog | sed -nr '/^Version:/s/Version: (.*:)?(.*)-(.*)/\2/p')
+
+
+%:
+	dh $@ --with dkms --with-systemd
+
+override_dh_dkms:
+	dh_dkms -V $(VERSION)
+
+override_dh_auto_build:
+	make -C library
+	evdiSO=`objdump -p library/libevdi.so | awk '$1 == "SONAME" {print $2}'`
+	mv library/libevdi.so library/$(evdiSO)
+	ln -s $(evdiSO) library/libevdi.so
+
+override_dh_auto_clean:
+	make -C library clean
+
+override_dh_auto_install:
+	# evdi-dkms
+	dh_install module/*.h module/*.c module/Makefile usr/src/evdi-$(VERSION)/
+	# evdi
+	dh_install library/libevdi.so* usr/lib/$(DEB_HOST_MULTIARCH)
+
+override_dh_systemd_start:
+	dh_systemd_start -pctdb --no-start --no-restart-on-upgrade
+
+# do nothing
+override_dh_auto_configure:
+override_dh_auto_test:
+override_dh_systemd_enable:
