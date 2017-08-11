@@ -1,18 +1,12 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: r8168
-Source: http://www.realtek.com/downloads/downloadsView.aspx?Langid=1&PNid=13&PFid=5&Level=5&Conn=4&DownTypeID=3&GetDown=false#2
-
-Files: *
-Copyright: Copyright(c) 2013-2016 Realtek Semiconductor Corp. All rights reserved.
-           Copyright (C) 2016  Realtek NIC software team <nicfae@realtek.com>
-License: GPL-2.0+
+Upstream-Name: evdi
+Source: https://github.com/DisplayLink/evdi
 
 Files: debian/*
-Copyright: © 2011-2016 Andreas Beckmann <anbe@debian.org>
-           © 2011-2012 Dmitry Smirnov <onlyjob@member.fsf.org>
+Copyright: 2017 Jacek Szafarkiewicz <szafar@linux.pl>
 License: GPL-2.0+
 
-License: GPL-2.0+
+License: GPL-2.0
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; either version 2 of the License, or
