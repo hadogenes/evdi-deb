@@ -11,10 +11,18 @@ Architecture: i386 amd64
 Description: Extensible Virtual Display Interface
  The Extensible Virtual Display Interface (EVDI) is a Linux® kernel module that enables management of multiple screens, allowing user-space programs to take control over what happens with the image. It is essentially a virtual display you can add, remove and receive screen updates for, in an application that uses the libevdi library.
 
+Package: evdi-dev
+Architecture: all
+Description: Extensible Virtual Display Interface
+ The Extensible Virtual Display Interface (EVDI) is a Linux® kernel module that enables management of multiple screens, allowing user-space programs to take control over what happens with the image. It is essentially a virtual display you can add, remove and receive screen updates for, in an application that uses the libevdi library.
+ .
+ This package provides the headers.
+ 
 Package: evdi-dkms
 Architecture: i386 amd64
-Depends: ${misc:Depends}
+Depends: dkms
 Description: dkms source Extensible Virtual Display Interface
  The Extensible Virtual Display Interface (EVDI) is a Linux® kernel module that enables management of multiple screens, allowing user-space programs to take control over what happens with the image. It is essentially a virtual display you can add, remove and receive screen updates for, in an application that uses the libevdi library.
+ .
  This package provides the dkms source code for the evdi kernel modules.
  Kernel source or headers are required to compile these modules.
