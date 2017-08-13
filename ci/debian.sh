@@ -7,6 +7,6 @@ apt install -y build-essential devscripts debhelper \
 cd base-src
 
 # Install deps
-mk-build-deps -i
+yes | mk-build-deps -i
 
 make
