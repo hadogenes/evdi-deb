@@ -2,8 +2,11 @@
 
 apt update
 apt install -y build-essential devscripts debhelper \
-    wget \
-    dkms
+    wget equivs
 
 cd base-src
+
+# Install deps
+mk-build-deps -i
+
 make
