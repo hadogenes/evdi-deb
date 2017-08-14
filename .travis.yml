@@ -25,8 +25,8 @@ deploy:
     skip_cleanup: true
     on:
       tags: true
-#    api_key:
-#        secure: faqfSs9slgmmDOquGF4qBu74gzClZ6Mr6aTn0wb8IWLQdfLXZ8kNufQU5qgMI+xOZBBAq9TAVAfpJ75MGoBkJC9xUFoA4E+i935ir/TPjy74KPoriHfg2rtKJW0P+Ma9BbG3NHs60/dIZKwMoXPR8YcTYQ6vNwckAxoHeXNfNmhoYNrLHgXEhKmPxWNFO/x4gLtA/w5bL1TR5TTHnFA7bmmHxXpIw0RH8zISYysWStOthZSyf7BBnyArM46kX1ez5gJQ/2RHHOiYp+KhzzLCDVIMDdXcCf18kxuSNiqbAkguSmhoQA53OUAuvcsBxwhm/zEBuhuhuZBGgZkArjuWIOh36bdCX1XfJLwOKiqvU3Gz99SDAHxc9VDZmTLXyUOIxu7BI8+1VSPUZT/0n9G7LUJzE3LgnuNtCcXP0LWQbt3cLyrKYVWZPtdGwQ+Q6EHM61MM5aGZBl+olHuCRMvkRWJYks88G+zWKSbwvRCwOolJNoKLvdeU2gqhia6Hfp0UHTZnvJRmvhrjNxrD5jXnL05fcr5h2g9C0uVCQAJNpC9qHRFk/WskGVrwRhlpSHME8ugawNsr5+/qzY4SZncbNoqn/iOTQE0wxNtdNNIYjofrPKsRMGErkOZzWFTzlF/2bdb2gOo2jU4QUCJwshOAv0gKJ3r1WJDaodKYXqasASA=
+    api_key:
+        secure: itWsMc2pmx40iqbG9a+TkKE4y/hrdv4ow89RLQZgtl/dIZ/U0yIMLIqJ2qXPnWRF89OG44iA5cX07DOir01c+3dWckSQv0PLo8jRkvuj9IbgEz+mY4iAPoJQRPnqKLfWC6ZAJ2a0N+rpu0esjINL9KfeBjBdkjM3UPYsVJQ6mT+ae6YtaEGHNK8d74WaRK7ucrdk+18HNo69X5tkl4pUnJ7dN820L9xGlI0fVkrdZ+Hb9mmlK6x1haoXTNzv/jrPs3EP/te2+tPstOL8viP5Nr4PknVc55SwOzNxH4aEk7igRTIjGG3v5MHz/jjDQnxwpxa6/F++QewXsepVXzFoIsaEYcwjg+sQHWLkvb3JVlNmOKXBJDdK4jhMQKt+fKYOq+5eftGhTkxnTQWyKpDJMn1Xwf84KaIZm9OynQ2ryslUFQvlvEjby/3jy7hwXppvWs7W1F+GcQVomzh+9pHzw/FtL3rEV8nZk5rnlc6XwzaKbVI9ZfXfjH++bB6GOCxviTPhf6MHrUFSgnazT6/YQJ/gY7Dp/6UGVmmCx3244eSqnZ51mMVWYgh5BQJyeyPwC67W/RstWP+nt4WA2dbG8diGBUEErHuLXSKI6t9HluEf3ezTVx8r5wLQaGseqqyshJKPdQ9ATjprtdgxDRcPqZL5JWQRjCshG6+RPnnFg5s=
     file_glob: true
     file:
         - deb/*
