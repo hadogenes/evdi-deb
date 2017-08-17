@@ -1,3 +1,9 @@
+evdi (1.4.1-2.1) UNRELEASED; urgency=medium
+
+  * Correct libevdi.so links
+
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Thu, 17 Aug 2017 23:00:59 +0200
+
 evdi (1.4.1-2) unstable; urgency=medium
 
   * Correct dependencies
