@@ -6,24 +6,21 @@ VERSION	:= $(shell dpkg-parsechangelog | sed -nr '/^Version:/s/Version: (.*:)?(.
 DESTDIR	= $(CURDIR)/debian/tmp
 
 %:
-	dh $@ --with dkms
+	dh $@ --with dkms --with quilt
 
 override_dh_dkms:
 	dh_dkms -V $(VERSION)
 
 override_dh_auto_build:
 	make -C library
-	mv library/libevdi.so library/libevdi.so.0
-	ln -s libevdi.so.0 library/libevdi.so
 
 override_dh_auto_clean:
 	make -C library clean
-	rm -f library/libevdi.so*
 
 override_dh_auto_install:
 	# evdi
 	install -D -m 644 -t "$(DESTDIR)/usr/lib/$(DEB_HOST_MULTIARCH)" library/libevdi.so.0
-	ln -s libevdi.so.0 "$(DESTDIR)/usr/lib/$(DEB_HOST_MULTIARCH)/libevdi.so"
+	cp library/libevdi.so "$(DESTDIR)/usr/lib/$(DEB_HOST_MULTIARCH)"
 	# evdi-dev
 	install -D -m 644 -t "$(DESTDIR)/usr/include/" library/*.h
 	# evdi-dkms

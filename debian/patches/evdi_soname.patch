@@ -1,0 +1,20 @@
+Correct evdi lib name and link to libevdi.so
+Index: evdi-1.4.1/library/Makefile
+===================================================================
+--- evdi-1.4.1.orig/library/Makefile
++++ evdi-1.4.1/library/Makefile
+@@ -8,11 +8,13 @@ CFLAGS := -I../module -std=gnu99 -fPIC $
+ default: libevdi.so
+ 
+ clean:
+-	rm -rf *.o libevdi.so
++	rm -rf *.o libevdi.so*
+ 
+ %.o: %.c $(DEPS)
+ 	$(CC) -c -o $@ $< $(CFLAGS)
+ 
+ libevdi.so: evdi_lib.o
+ 	$(CC) $^ -o $@ -lc -lgcc -shared -Wl,-soname,libevdi.so.0
++	mv libevdi.so libevdi.so.0
++	ln -s libevdi.so.0 libevdi.so
+ 
