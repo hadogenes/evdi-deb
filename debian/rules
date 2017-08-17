@@ -20,7 +20,7 @@ override_dh_auto_clean:
 override_dh_auto_install:
 	# evdi
 	install -D -m 644 -t "$(DESTDIR)/usr/lib/$(DEB_HOST_MULTIARCH)" library/libevdi.so.0
-	cp library/libevdi.so "$(DESTDIR)/usr/lib/$(DEB_HOST_MULTIARCH)"
+	cp -d library/libevdi.so "$(DESTDIR)/usr/lib/$(DEB_HOST_MULTIARCH)"
 	# evdi-dev
 	install -D -m 644 -t "$(DESTDIR)/usr/include/" library/*.h
 	# evdi-dkms
