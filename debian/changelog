@@ -1,8 +1,14 @@
-evdi (1.5.0-1) UNRELEASED; urgency=medium
+evdi (1.5.0.2-1) UNRELEASED; urgency=medium
 
   * New upstream release 
 
- -- Jacek Szafarkiewicz <hadogenes@prope>  Mon, 04 Dec 2017 22:36:23 +0100
+ -- Jacek Szafarkiewicz <szafar@linux.pl>, 08 May 2018 20:59:14 +0200
+
+evdi (1.5.0-1) unstable; urgency=medium
+
+  * New upstream release 
+
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Tue, 08 May 2018 20:58:29 +0200
 
 evdi (1.4.1-2.1) unstable; urgency=medium
 
