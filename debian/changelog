@@ -1,8 +1,8 @@
-evdi (1.5.1-1) UNRELEASED; urgency=medium
+evdi (1.5.1-1) unstable; urgency=medium
 
   * New upstream release
 
- -- Jacek Szafarkiewicz <szafar@linux.pl>  Mon, 28 Jan 2019 10:07:59 +0100
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Mon, 28 Jan 2019 10:28:13 +0100
 
 evdi (1.5.0.2-1) unstable; urgency=medium
 
